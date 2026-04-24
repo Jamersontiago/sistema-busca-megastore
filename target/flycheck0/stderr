@@ -1,0 +1,142 @@
+   0.104567600s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="megastore_busca"}: cargo::core::compiler::fingerprint: fingerprint error for megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("megastore_busca", ["lib"], "C:\\Users\\jamer\\OneDrive\\Documentos\\sistema-busca-megastrore\\src\\lib.rs", Edition2021) }
+   0.104703200s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="megastore_busca"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\target\debug\.fingerprint\megastore_busca-8a796fcc1abbf9f5\lib-megastore_busca`
+
+Caused by:
+    O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.136284400s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="megastore_busca"}: cargo::core::compiler::fingerprint: fingerprint error for megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("megastore_busca", ["lib"], "C:\\Users\\jamer\\OneDrive\\Documentos\\sistema-busca-megastrore\\src\\lib.rs", Edition2021) }
+   0.136343800s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="megastore_busca"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\target\debug\.fingerprint\megastore_busca-47805c3c02f4404c\test-lib-megastore_busca`
+
+Caused by:
+    O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.137214200s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="megastore_busca"}: cargo::core::compiler::fingerprint: fingerprint error for megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore)/Check { test: false }/TargetInner { name: "megastore_busca", doc: true, ..: with_path("C:\\Users\\jamer\\OneDrive\\Documentos\\sistema-busca-megastrore\\src\\main.rs", Edition2021) }
+   0.137266100s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="megastore_busca"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\target\debug\.fingerprint\megastore_busca-63c5a7d14d4cde52\bin-megastore_busca`
+
+Caused by:
+    O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.138196600s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="megastore_busca"}: cargo::core::compiler::fingerprint: fingerprint error for megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore)/Check { test: true }/TargetInner { name: "megastore_busca", doc: true, ..: with_path("C:\\Users\\jamer\\OneDrive\\Documentos\\sistema-busca-megastrore\\src\\main.rs", Edition2021) }
+   0.138232600s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="megastore_busca"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\target\debug\.fingerprint\megastore_busca-dd927d94da65b134\test-bin-megastore_busca`
+
+Caused by:
+    O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.139073300s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="busca_test"}: cargo::core::compiler::fingerprint: fingerprint error for megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore)/Check { test: true }/TargetInner { kind: "test", name: "busca_test", benched: false, ..: with_path("C:\\Users\\jamer\\OneDrive\\Documentos\\sistema-busca-megastrore\\tests\\busca_test.rs", Edition2021) }
+   0.139123000s  INFO prepare_target{force=false package_id=megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore) target="busca_test"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\target\debug\.fingerprint\megastore_busca-13e9207f428b0b78\test-integration-test-busca_test`
+
+Caused by:
+    O sistema não pode encontrar o arquivo especificado. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+    Checking megastore_busca v0.1.0 (C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.07s
