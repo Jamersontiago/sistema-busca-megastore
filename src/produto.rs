@@ -1,28 +1,18 @@
-
 #[derive(Debug, Clone)]
 pub struct Produto {
-    pub id: u32,
     pub nome: String,
     pub categoria: String,
     pub marca: String,
-    pub preco: f64,
+    pub preco: f32,
 }
 
-pub fn criar_produtos() -> Vec<Produto> {
-    vec![
+impl Produto {
+    pub fn novo(nome: &str, categoria: &str, marca: &str, preco: f32) -> Self {
         Produto {
-            id: 1,
-            nome: "Notebook Dell".to_string(),
-            categoria: "Eletrônicos".to_string(),
-            marca: "Dell".to_string(),
-            preco: 3500.0,
-        },
-        Produto {
-            id: 2,
-            nome: "Mouse Gamer".to_string(),
-            categoria: "Eletrônicos".to_string(),
-            marca: "Logitech".to_string(),
-            preco: 150.0,
-        },
-    ]
+            nome: nome.to_lowercase(),
+            categoria: categoria.to_lowercase(),
+            marca: marca.to_lowercase(),
+            preco,
+        }
+    }
 }

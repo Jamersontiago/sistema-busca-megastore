@@ -1,28 +1,45 @@
-
-use megastore_busca::produto::*;
-use megastore_busca::busca::*;
+use megastore_busca::{Sistema, Produto};
 
 #[test]
 fn teste_busca_nome() {
-    let sistema = SistemaBusca::novo(criar_produtos());
-    assert!(sistema.buscar_nome("Notebook Dell").is_some());
-}
+    let mut sistema = Sistema::novo();
 
-#[test]
-fn teste_busca_marca() {
-    let sistema = SistemaBusca::novo(criar_produtos());
-    assert!(sistema.buscar_marca("Dell").is_some());
+    sistema.adicionar_produto(Produto::novo("Arroz", "Alimento", "Tio João", 20.0));
+
+    let resultado = sistema.buscar_por_nome("arroz");
+
+    assert!(resultado.is_some());
 }
 
 #[test]
 fn teste_busca_categoria() {
-    let sistema = SistemaBusca::novo(criar_produtos());
-    assert!(sistema.buscar_categoria("Eletrônicos").is_some());
+    let mut sistema = Sistema::novo();
+
+    sistema.adicionar_produto(Produto::novo("Feijão", "Alimento", "Camil", 10.0));
+
+    let resultado = sistema.buscar_por_categoria("alimento");
+
+    assert_eq!(resultado.len(), 1);
+}
+
+#[test]
+fn teste_busca_marca() {
+    let mut sistema = Sistema::novo();
+
+    sistema.adicionar_produto(Produto::novo("Notebook Dell", "Eletrônico", "Dell", 3500.0));
+
+    let resultado = sistema.buscar_por_marca("dell");
+
+    assert_eq!(resultado.len(), 1);
 }
 
 #[test]
 fn teste_busca_preco() {
-    let sistema = SistemaBusca::novo(criar_produtos());
-    let r = sistema.buscar_por_preco(100.0, 4000.0);
-    assert!(r.len() > 0);
+    let mut sistema = Sistema::novo();
+
+    sistema.adicionar_produto(Produto::novo("Notebook Dell", "Eletrônico", "Dell", 3500.0));
+
+    let resultado = sistema.buscar_por_preco_min(1000.0);
+
+    assert_eq!(resultado.len(), 1);
 }

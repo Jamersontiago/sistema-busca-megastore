@@ -1,49 +1,68 @@
-
 use std::collections::HashMap;
-use crate::produto::Produto;
+use crate::Produto;
 
-pub struct SistemaBusca {
-    pub por_nome: HashMap<String, Vec<Produto>>,
-    pub por_categoria: HashMap<String, Vec<Produto>>,
-    pub por_marca: HashMap<String, Vec<Produto>>,
+pub struct Sistema {
+    pub produtos: Vec<Produto>,
+    pub indice_nome: HashMap<String, usize>,
+    pub indice_categoria: HashMap<String, Vec<usize>>,
+    pub indice_marca: HashMap<String, Vec<usize>>,
 }
 
-impl SistemaBusca {
-    pub fn novo(produtos: Vec<Produto>) -> Self {
-        let mut por_nome = HashMap::new();
-        let mut por_categoria = HashMap::new();
-        let mut por_marca = HashMap::new();
-
-        for p in produtos {
-            por_nome.entry(p.nome.to_lowercase()).or_insert(Vec::new()).push(p.clone());
-            por_categoria.entry(p.categoria.to_lowercase()).or_insert(Vec::new()).push(p.clone());
-            por_marca.entry(p.marca.to_lowercase()).or_insert(Vec::new()).push(p.clone());
+impl Sistema {
+    pub fn novo() -> Self {
+        Sistema {
+            produtos: Vec::new(),
+            indice_nome: HashMap::new(),
+            indice_categoria: HashMap::new(),
+            indice_marca: HashMap::new(),
         }
-
-        Self { por_nome, por_categoria, por_marca }
     }
 
-    pub fn buscar_nome(&self, nome: &str) -> Option<&Vec<Produto>> {
-        self.por_nome.get(&nome.to_lowercase())
+    pub fn adicionar_produto(&mut self, produto: Produto) {
+        let index = self.produtos.len();
+
+        self.indice_nome.insert(produto.nome.clone(), index);
+
+        self.indice_categoria
+            .entry(produto.categoria.clone())
+            .or_insert(Vec::new())
+            .push(index);
+
+        self.indice_marca
+            .entry(produto.marca.clone())
+            .or_insert(Vec::new())
+            .push(index);
+
+        self.produtos.push(produto);
     }
 
-    pub fn buscar_categoria(&self, categoria: &str) -> Option<&Vec<Produto>> {
-        self.por_categoria.get(&categoria.to_lowercase())
+    pub fn buscar_por_nome(&self, nome: &str) -> Option<&Produto> {
+        let nome = nome.to_lowercase();
+        self.indice_nome
+            .get(&nome)
+            .map(|&i| &self.produtos[i])
     }
 
-    pub fn buscar_marca(&self, marca: &str) -> Option<&Vec<Produto>> {
-        self.por_marca.get(&marca.to_lowercase())
-    }
-
-    pub fn buscar_por_preco(&self, min: f64, max: f64) -> Vec<Produto> {
-        let mut resultado = Vec::new();
-        for lista in self.por_nome.values() {
-            for p in lista {
-                if p.preco >= min && p.preco <= max {
-                    resultado.push(p.clone());
-                }
-            }
+    pub fn buscar_por_categoria(&self, categoria: &str) -> Vec<&Produto> {
+        let categoria = categoria.to_lowercase();
+        match self.indice_categoria.get(&categoria) {
+            Some(indices) => indices.iter().map(|&i| &self.produtos[i]).collect(),
+            None => Vec::new(),
         }
-        resultado
+    }
+
+    pub fn buscar_por_marca(&self, marca: &str) -> Vec<&Produto> {
+        let marca = marca.to_lowercase();
+        match self.indice_marca.get(&marca) {
+            Some(indices) => indices.iter().map(|&i| &self.produtos[i]).collect(),
+            None => Vec::new(),
+        }
+    }
+
+    pub fn buscar_por_preco_min(&self, preco_min: f32) -> Vec<&Produto> {
+        self.produtos
+            .iter()
+            .filter(|p| p.preco >= preco_min)
+            .collect()
     }
 }
