@@ -1,75 +1,61 @@
-# 🛒 Sistema de Busca - MegaStore
+# 🔎 Sistema de Busca - Megastore
 
-## 📌 Sobre o Projeto
-O Sistema de Busca MegaStore é uma aplicação desenvolvida com foco em otimizar a busca de produtos em um ambiente de vendas, simulando o funcionamento de um sistema de consulta eficiente utilizado em supermercados e e-commerces.
-
-O projeto foi construído com o objetivo de aplicar conceitos de estrutura de dados, lógica computacional e performance em buscas, proporcionando rapidez e organização no acesso às informações.
+Sistema desenvolvido para simular um mecanismo de busca de produtos em uma megastore, com foco em desempenho, organização de dados e boas práticas de desenvolvimento.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
-- Rust 🦀
-- Estruturas de Dados
-- Algoritmos de Busca
-- Git e GitHub
+## 🚀 Tecnologias utilizadas
+- Rust
+- Git & GitHub
+
+---
+
+## 🎯 Objetivo do projeto
+Este projeto foi criado com o objetivo de praticar:
+- Estruturação de sistemas
+- Manipulação e busca de dados
+- Lógica de programação
+- Versionamento com Git
 
 ---
 
 ## ⚙️ Funcionalidades
 - 🔍 Busca de produtos por nome
-- 📦 Organização de dados
-- ⚡ Respostas rápidas com foco em performance
-- 🧠 Aplicação de algoritmos eficientes
+- 📦 Listagem de itens disponíveis
+- 🧠 Organização eficiente dos dados
+- ⚡ Execução rápida via terminal
 
 ---
 
-## 📂 Estrutura do Projeto
-bash sistema-busca-megastore/ │ ├── src/              # Código fonte principal ├── tests/            # Testes automatizados ├── Cargo.toml        # Configuração do projeto Rust └── README.md         # Documentação 
-
----
-
-## ▶️ Como Executar o Projeto
+## 🛠️ Como executar o projeto
 
 ### Pré-requisitos
-- Ter o Rust instalado  
-👉 https://www.rust-lang.org/tools/install
+- Ter o Rust instalado (cargo)
 
 ### Passos
-
-bash # Clonar o repositório git clone https://github.com/Jamersontiago/sistema-busca-megastore.git  # Acessar a pasta cd sistema-busca-megastore  # Rodar o projeto cargo run 
-
----
-
-## 🧪 Executar Testes
-
-bash cargo test 
+bash git clone https://github.com/Jamersontiago/sistema-busca-megastore.git cd sistema-busca-megastore cargo run 
 
 ---
 
-## 🎯 Objetivo do Projeto
-Este projeto foi desenvolvido com foco educacional e profissional, com o objetivo de:
-
-- Praticar desenvolvimento em Rust
-- Aplicar conceitos de algoritmos de busca
-- Melhorar organização de código
-- Construir portfólio na área de tecnologia
+## 📂 Estrutura do projeto
+sistema-busca-megastore/ ├── src/ ├── Cargo.toml ├── .gitignore └── README.md
 
 ---
 
-## 📈 Possíveis Melhorias
-- Implementar interface gráfica
-- Criar API para integração com frontend
-- Adicionar banco de dados
-- Melhorar algoritmos de busca (ex: busca binária, índices)
+## 📈 Melhorias futuras
+- Interface gráfica (GUI)
+- Integração com banco de dados
+- API para consumo externo
+- Filtros avançados de busca
 
 ---
 
 ## 👨‍💻 Autor
 Jamerson Tiago  
 📌 Estudante de Análise e Desenvolvimento de Sistemas  
-💼 Foco em Backend, Dados e Automação  
+💡 Interesse em Backend, Dados e Automação
 
 ---
 
-## 📄 Licença
-Este projeto está sob a licença M
+## 📌 Status do projeto
+🚧 Em desenvolvime
