@@ -1,0 +1,1 @@
+C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\target\debug\libmegastore_busca.rlib: C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\src\busca.rs C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\src\lib.rs C:\Users\jamer\OneDrive\Documentos\sistema-busca-megastrore\src\produto.rs
