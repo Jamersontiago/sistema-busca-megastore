@@ -1,80 +1,130 @@
-# 🔎 Sistema de Busca de Produtos - Megastore
+# 🛒 Sistema de Busca de Produtos - MegaStore
 
-> Sistema de busca de produtos via terminal, desenvolvido em Rust, com foco em performance, organização de dados e boas práticas de desenvolvimento backend.
-
----
-
-## 📸 Exemplo de execução
-
-bash Digite o nome do produto: > notebook  Buscando produto...  Produto encontrado: Nome: Notebook Dell Preço: R$ 3500,00 
+Sistema desenvolvido em Rust com foco em desempenho e organização de dados, utilizando estruturas de dados eficientes para realizar buscas rápidas em um catálogo de produtos.
 
 ---
 
-## 🧠 Como funciona a busca
+## 📌 Objetivo
 
-A busca de produtos é realizada utilizando uma abordagem de busca linear em uma coleção de dados armazenada em memória.
+Implementar um sistema de busca otimizado capaz de localizar produtos por:
 
-O sistema percorre os itens sequencialmente até encontrar uma correspondência com o termo pesquisado, retornando as informações do produto.
+- Nome  
+- Categoria  
+- Marca  
+- Faixa de preço  
 
-Essa abordagem foi escolhida pela simplicidade e eficiência em conjuntos de dados pequenos e médios.
-
----
-
-## 🧠 Decisões Técnicas
-
-- Implementação de busca linear para garantir simplicidade e clareza do algoritmo  
-- Estrutura organizada para facilitar manutenção e evolução do sistema  
-- Separação de responsabilidades entre entrada, processamento e saída de dados  
+Utilizando HashMap (tabelas hash) para garantir alta performance.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## ⚙️ Tecnologias utilizadas
 
-- 🦀 Rust  
-- ⚙️ Cargo  
-- 🗂️ Git  
-- 🌐 GitHub  
-
----
-
-## ⚙️ Como executar o projeto
-
-### Pré-requisitos
-- Ter o Rust instalado (cargo)
-
-### Passos
-
-bash git clone https://github.com/Jamersontiago/sistema-busca-megastore.git cd sistema-busca-megastore cargo run 
-
-O sistema será executado diretamente no terminal.
+- Rust  
+- HashMap (estrutura de dados)  
+- Testes automatizados com cargo test  
 
 ---
 
-## 📂 Estrutura do projeto
+## 🧠 Estrutura do sistema
 
-sistema-busca-megastore/ ├── src/        # Código-fonte principal ├── Cargo.toml  # Configuração do projeto Rust ├── .gitignore  # Arquivos ignorados pelo Git └── README.md   # Documentação do projeto
+O sistema utiliza múltiplos índices para otimizar as buscas:
+
+- indice_nome: HashMap<String, Produto>  
+- indice_categoria: HashMap<String, Vec<Produto>>  
+- indice_marca: HashMap<String, Vec<Produto>>  
+
+Isso permite acesso direto aos dados sem necessidade de percorrer toda a lista.
 
 ---
 
-## 📈 Melhorias futuras
+## 🚀 Como executar o projeto
 
-- Implementação de busca binária para melhor performance  
-- Utilização de HashMap para buscas em tempo O(1)  
-- Persistência de dados com banco de dados  
-- Criação de API para integração com outros sistemas  
+bash cargo run 
+
+---
+
+## 💻 Exemplo real de uso (terminal)
+
+Ao executar o sistema, o usuário pode buscar um produto digitando seu nome:
+
+text Digite o nome do produto: notebook dell 
+
+### 📤 Saída:
+
+text Produto encontrado: Nome: notebook dell Categoria: eletrônico Marca: dell Preço: R$ 3500.00 
+
+✔ Esse exemplo demonstra a busca eficiente por nome utilizando HashMap (complexidade O(1)).
+
+---
+
+## 🧪 Testes automatizados
+
+O sistema possui testes reais cobrindo todas as funcionalidades principais:
+
+- Busca por nome  
+- Busca por categoria  
+- Busca por marca  
+- Busca por preço  
+
+Para executar:
+
+bash cargo test 
+
+### ✔ Resultado esperado:
+
+text running 4 tests test teste_busca_nome ... ok test teste_busca_categoria ... ok test teste_busca_marca ... ok test teste_busca_preco ... ok  test result: ok. 4 passed; 0 failed 
+
+---
+
+## 📊 Complexidade e desempenho
+
+| Tipo de busca        | Complexidade |
+|---------------------|-------------|
+| Busca por nome      | O(1)        |
+| Busca por categoria | O(k)        |
+| Busca por marca     | O(k)        |
+| Busca por preço     | O(n)        |
+
+- O(1) → acesso direto via HashMap  
+- O(k) → número de itens encontrados  
+- O(n) → varredura completa da lista  
+
+---
+
+## 🏗️ Arquitetura do projeto
+
+src/  ├── main.rs        → interação com o usuário  ├── lib.rs         → exportação dos módulos  ├── produto.rs     → definição da struct Produto  ├── busca.rs       → lógica de indexação e busca  tests/  └── busca_test.rs  → testes automatizados
+
+---
+
+## 🔍 Funcionalidades implementadas
+
+- Inserção de produtos  
+- Busca por nome (instantânea)  
+- Busca por categoria  
+- Busca por marca  
+- Busca por preço mínimo  
+- Testes automatizados  
+- Execução interativa via terminal  
+
+---
+
+## 📈 Possíveis melhorias
+
+- Indexação por faixa de preço com estruturas ordenadas (ex: BTreeMap)  
+- Interface gráfica (GUI)  
+- API REST para integração com frontend  
+- Persistência em banco de dados  
 
 ---
 
 ## 👨‍💻 Autor
 
-Jamerson Tiago  
-📌 Estudante de Análise e Desenvolvimento de Sistemas  
-💡 Interesse em Backend, Dados e Automação  
-🔗 GitHub: https://github.com/Jamersontiago  
+Jamerson Tiago da Silva Leite  
+Estudante de Análise e Desenvolvimento de Sistemas  
 
 ---
 
-## 📌 Status do projeto
+## 📌 Considerações finais
 
-✅ Funcional  
-🚧 Em evolução
+Este projeto demonstra na prática a aplicação de estruturas de dados eficientes, integrando teoria e implementação real, com foco em desempenho, organização e escalabilida
