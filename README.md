@@ -53,7 +53,7 @@ text Digite o nome do produto: notebook dell
 
 text Produto encontrado: Nome: notebook dell Categoria: eletrônico Marca: dell Preço: R$ 3500.00 
 
-✔ Esse exemplo demonstra a busca eficiente por nome utilizando HashMap (complexidade O(1)).
+✔ Esse exemplo demonstra a busca eficiente por nome utilizando HashMap (complexidade (ok)).
 
 ---
 
@@ -80,14 +80,14 @@ text running 4 tests test teste_busca_nome ... ok test teste_busca_categoria ...
 
 | Tipo de busca        | Complexidade |
 |---------------------|-------------|
-| Busca por nome      | O(1)        |
-| Busca por categoria | O(k)        |
-| Busca por marca     | O(k)        |
-| Busca por preço     | O(n)        |
+| Busca por nome      | (ok)        |
+| Busca por categoria | (ok)        |
+| Busca por marca     | (ok)        |
+| Busca por preço     | (ok)        |
 
-- O(1) → acesso direto via HashMap  
-- O(k) → número de itens encontrados  
-- O(n) → varredura completa da lista  
+- (ok) → acesso direto via HashMap  
+- (ok) → número de itens encontrados  
+- (ok) → varredura completa da lista  
 
 ---
 
@@ -127,4 +127,4 @@ Estudante de Análise e Desenvolvimento de Sistemas
 
 ## 📌 Considerações finais
 
-Este projeto demonstra na prática a aplicação de estruturas de dados eficientes, integrando teoria e implementação real, com foco em desempenho, organização e escalabilida
+Este projeto demonstra na prática a aplicação de estruturas de dados eficientes, integrando teoria e implementação real, com foco em desempenho, organização e escalabilida.
