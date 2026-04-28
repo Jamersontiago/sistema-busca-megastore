@@ -1,10 +1,10 @@
-#  Sistema de Busca de Produtos - MegaStore
+# Sistema de Busca de Produtos - MegaStore
 
 Sistema desenvolvido em Rust com foco em desempenho, organização e eficiência na busca de produtos em grandes catálogos, utilizando estruturas de dados otimizadas como HashMap para garantir consultas rápidas.
 
 ---
 
-##  Objetivo
+## Objetivo
 
 Implementar um sistema de busca otimizado capaz de localizar produtos por:
 
@@ -17,7 +17,7 @@ Utilizando tabelas hash para maximizar a performance.
 
 ---
 
-##  Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - Rust  
 - HashMap (tabelas hash)  
@@ -27,7 +27,7 @@ Utilizando tabelas hash para maximizar a performance.
 
 ---
 
-##  Estrutura do sistema
+## Estrutura do sistema
 
 O sistema utiliza múltiplos índices para otimizar as buscas:
 
@@ -39,27 +39,27 @@ Essa abordagem elimina a necessidade de percorrer toda a coleção de produtos p
 
 ---
 
-##  Como executar o projeto
+## Como executar o projeto
 
 bash cargo run 
 
 ---
 
-##  Exemplo real de uso (terminal)
+## Exemplo real de uso (terminal)
 
 Ao executar o sistema, o usuário pode buscar um produto digitando seu nome:
 
 text Digite o nome do produto: notebook dell 
 
-###  Saída:
+### Saída:
 
 text Produto encontrado: Nome: notebook dell Categoria: eletrônico Marca: dell Preço: R$ 3500.00 
 
-✔ Esse exemplo demonstra a busca eficiente por nome utilizando HashMap com complexidade média O(1).
+Esse exemplo demonstra a busca eficiente por nome utilizando HashMap com complexidade média O(1).
 
 ---
 
-##  Testes automatizados
+## Testes automatizados
 
 O sistema possui testes reais cobrindo todas as funcionalidades principais:
 
@@ -72,36 +72,37 @@ O sistema possui testes reais cobrindo todas as funcionalidades principais:
 
 bash cargo test 
 
-### ✔ Resultado esperado:
+### Resultado esperado:
 
 text running 4 tests test teste_busca_nome ... ok test teste_busca_categoria ... ok test teste_busca_marca ... ok test teste_busca_preco ... ok  test result: ok. 4 passed; 0 failed 
 
 ---
 
-##  Complexidade e desempenho
+## Complexidade e desempenho
 
 | Tipo de busca        | Complexidade |
-|---------------------|-------------|
-| Busca por nome      | O(1)        |
-| Busca por categoria | O(1)        |
-| Busca por marca     | O(1)        |
-| Busca por preço     | O(n)        |
+|----------------------|--------------|
+| Busca por nome       | O(1)         |
+| Busca por categoria  | O(1)         |
+| Busca por marca      | O(1)         |
+| Busca por preço      | O(n)         |
 
-- O(1) → acesso direto via HashMap  
-- O(n) → varredura linear sobre os produtos  
+- O(1): acesso direto via HashMap  
+- O(n): varredura linear sobre os produtos  
 
-### Análise:
+### Análise
+
 O uso de HashMap garante desempenho significativamente superior para buscas indexadas em comparação à busca linear tradicional, tornando o sistema escalável para catálogos maiores.
 
 ---
 
-##  Arquitetura do projeto
+## Arquitetura do projeto
 
-bash src/ ├── main.rs         # interação com o usuário ├── lib.rs          # exportação dos módulos ├── produto.rs      # definição da struct Produto ├── busca.rs        # lógica de indexação e busca  tests/ └── busca_test.rs   # testes automatizados 
+bash src/ ├── main.rs         # Interação com o usuário ├── lib.rs          # Exportação dos módulos ├── produto.rs      # Definição da struct Produto ├── busca.rs        # Lógica de indexação e busca tests/ └── busca_test.rs   # Testes automatizados 
 
 ---
 
-##  Funcionalidades implementadas
+## Funcionalidades implementadas
 
 - Inserção de produtos  
 - Busca por nome  
@@ -114,7 +115,7 @@ bash src/ ├── main.rs         # interação com o usuário ├── lib.r
 
 ---
 
-##  Possíveis melhorias
+## Possíveis melhorias
 
 - Indexação por faixa de preço com estruturas ordenadas (ex: BTreeMap)  
 - Interface gráfica (GUI)  
@@ -124,14 +125,14 @@ bash src/ ├── main.rs         # interação com o usuário ├── lib.r
 
 ---
 
-##  Autor
+## Autor
 
 Jamerson Tiago da Silva Leite  
 Estudante de Análise e Desenvolvimento de Sistemas  
 
 ---
 
-##  Considerações finais
+## Considerações finais
 
 Este projeto demonstra na prática a aplicação de estruturas de dados eficientes em Rust, integrando teoria acadêmica e implementação real, com foco em desempenho, organização, manutenção e escalabilidade.
 
